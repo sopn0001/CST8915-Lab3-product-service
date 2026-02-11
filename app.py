@@ -33,4 +33,5 @@ if __name__ == '__main__':
     app = create_app()
     # Get the port from the environment variable or default to 3030
     port = int(os.getenv('PORT', 3030))
+    print(f"Starting server on port {port}...")
     app.run(host='0.0.0.0', port=port)
