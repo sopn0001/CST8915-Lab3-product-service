@@ -11,14 +11,13 @@ def create_app():
     app = Flask(__name__)
 
     # # Enable CORS for all routes and origins
-    # CORS(app)
+    CORS(app)
 
 
     @app.route('/')
     def hello_world():
         return 'Hello, World! on port 3030'
 
-    from flask_cors import CORS
     @app.route('/products', methods=['GET'])
     def fetch_products():
         products = [{ "id": 1, "name": "Dog Food", "price": 19.99 },
