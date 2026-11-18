@@ -28,8 +28,12 @@ def create_app():
 
     return app
 
+
+# Created at import time so Gunicorn can load it (Elastic Beanstalk does not
+# run this file as __main__).
+app = create_app()
+
 if __name__ == '__main__':
-    app = create_app()
     # Get the port from the environment variable or default to 3030
     port = int(os.getenv('PORT', 3030))
     print(f"Starting server on port {port}...")
