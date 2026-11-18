@@ -22,7 +22,7 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: product_service
           environment_name: Productservice-env
-          version_label: ${{ github.sha }}
+          version_label: ${{ github.sha }}-${{ github.run_number }}
           region: ca-central-1
           deployment_package: deploy.zip
 
