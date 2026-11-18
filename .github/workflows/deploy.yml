@@ -23,7 +23,7 @@ jobs:
           application_name: product_service
           environment_name: Productservice-env
           version_label: ${{ github.sha }}
-          region: us-east-1
+          region: ca-central-1
           deployment_package: deploy.zip
 
 
